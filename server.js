@@ -16,16 +16,15 @@ var router = express.Router();
 
 //routes for API
 router.get('/', function(req, res) {
-    markdown.getReadme(function(data){
-      res.set('Content-Type', 'text/html');
-      res.status(200).send(data).end();
-    });
+  markdown.getReadme(function(data){
+    res.set('Content-Type', 'text/html');
+    res.status(200).send(data).end();
+  });
 });
 
 router.get('/hello', function(req, res) {
   res.set('Content-Type', 'application/json');
   res.status(200).send(helloJson).end();
-
 });
 
 //register route
